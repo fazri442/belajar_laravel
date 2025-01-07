@@ -102,3 +102,8 @@ route::get('/latihan/{nama}/{tlp}/{jen_bar}/{nam_bar}/{jumlah}/{bayar}', functio
     "------------------------<br>" .
     "Total Pembayaran: " . $totals = $total - $cashback - $potongan;
 });
+ route::get('/siswa', function(){
+    $data_siswa = ['kyendra','napis','fazri','adli'];
+
+    return view('tampil', compact('data_siswa'));
+ });
