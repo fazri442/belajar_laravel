@@ -18,6 +18,8 @@ class PostsTableSeeder extends Seeder
             ['title' => 'tips cepat pintar', 'content' => 'lorem ipsum'],
             ['title' => 'haruskah menunda belajar', 'content' => 'lorem ipsum'],
             ['title' => 'membangun visi misi kesuksesan', 'content' => 'lorem ipsum'],
+            ['title' => 'membangun visi misi kesuksesan1', 'content' => 'lorem ipsum'],
+            ['title' => 'membangun visi misi kesuksesan2', 'content' => 'lorem ipsum'],
         ];
         DB::table('posts')->insert($posts);
     }

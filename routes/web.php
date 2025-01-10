@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\BarangsController;
+use App\Http\Controllers\PpdbsController;
+use App\Http\Controllers\SiswasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -102,8 +104,26 @@ route::get('/latihan/{nama}/{tlp}/{jen_bar}/{nam_bar}/{jumlah}/{bayar}', functio
     "------------------------<br>" .
     "Total Pembayaran: " . $totals = $total - $cashback - $potongan;
 });
- route::get('/siswa', function(){
-    $data_siswa = ['kyendra','napis','fazri','adli'];
+route::get('/siswa', function () {
+    $data_siswa = ['kyendra', 'napis', 'fazri', 'adli'];
 
     return view('tampil', compact('data_siswa'));
- });
+});
+
+// route::get('/post', [PostsController::class, 'tampilkan']);
+// route::get('/barang1', function(){
+//     barang::where('id',1)->get;
+// });
+
+route::get('/barang', [BarangsController::class, 'menampilkan']);
+route::get('/post', [BarangsController::class, 'menampilkan2']);
+
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('siswa', SiswasController::class);
+
+//tugas
+Route::resource('ppdb', PpdbsController::class);

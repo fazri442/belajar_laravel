@@ -15,11 +15,11 @@ class BarangsTableSeeder extends Seeder
     public function run()
     {
         $barangs = [
-            ['nama barang' => 'kulkas', 'merk' => 'Sonic', 'harga' => '1000000'],
-            ['nama barang' => 'laptop', 'merk' => 'Thinkpad', 'harga' => '4000000'],
-            ['nama barang' => 'handphone', 'merk' => 'oppo', 'harga' => '1200000'],
-            ['nama barang' => 'pulpen', 'merk' => 'Joyko', 'harga' => '3000'],
-            ['nama barang' => 'botol', 'merk' => 'My Bottle', 'harga' => '10000'],
+            ['nama_barang' => 'kulkas', 'merk' => 'Sonic', 'harga' => '1000000'],
+            ['nama_barang' => 'laptop', 'merk' => 'Thinkpad', 'harga' => '4000000'],
+            ['nama_barang' => 'handphone', 'merk' => 'oppo', 'harga' => '1200000'],
+            ['nama_barang' => 'pulpen', 'merk' => 'Joyko', 'harga' => '3000'],
+            ['nama_barang' => 'botol', 'merk' => 'My Bottle', 'harga' => '10000'],
         ];
         DB::table('barangs')->insert($barangs);
     }
